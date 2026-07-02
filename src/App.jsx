@@ -1,0 +1,1 @@
+import {useEffect,useState} from "react";export default function App(){const[m,s]=useState("");useEffect(()=>{fetch("http://localhost:5000/api/message").then(r=>r.json()).then(d=>s(d.message));},[]);return <div><h1>React Frontend</h1><h2>{m}</h2></div>}
